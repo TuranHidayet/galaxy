@@ -11,6 +11,7 @@ body{
     align-items: center;
     height: 100vh;
     overflow-x: hidden;
+    
 }
 
 
@@ -92,6 +93,7 @@ body{
     animation: rotate-venus 14s linear infinite;
     transform: translateX(-50%);
 }
+
 .orbit-mars {
     width: 700px;
     height: 700px;
@@ -102,8 +104,25 @@ body{
     left: 250px;
 }
 
+.moon{
+  width: 30px;
+  height: 30px;
+  animation: rotate-venus 10s linear infinite;
+  transform: translateX(-50%);
+  position: absolute;
+  top: -30px; 
+  left: -30px;
+}
 
-
+.orbit-moon {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  position: relative;
+  animation: rotate-orbit 17s linear infinite; 
+  
+  transform-origin: 25px 25px;
+}
 
 @keyframes rotate-body {
     0%{
@@ -161,3 +180,20 @@ body{
     }
   }
 
+  @keyframes rotate-moon {
+    0%{
+      transform: rotate(0deg);
+    }
+    100%{
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes rotate-orbit-moon {
+    0%{
+      transform: rotate(0deg);
+    }
+    100%{
+      transform: rotate(360deg);
+    }
+  } 
